@@ -13,24 +13,15 @@ import java.util.List;
  *
  * @author SANTI
  */
-public class Signature implements Serializable{
-    
-    private List<Class> classes ; 
+public class Person implements Serializable{
     private String id ; 
     private String name ; 
+    private List<Signature> signatures ; 
 
-    public Signature( String id, String name) {
-        this.classes = new ArrayList<Class>();
+    public Person(String id, String name) {
         this.id = id;
         this.name = name;
-    }
-
-    public List<Class> getClasses() {
-        return classes;
-    }
-
-    public void setClasses(List<Class> classes) {
-        this.classes = classes;
+        this.signatures = new ArrayList<Signature>();
     }
 
     public String getId() {
@@ -47,6 +38,14 @@ public class Signature implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Signature> getSignatures() {
+        return signatures;
+    }
+
+    public void setSignatures(List<Signature> signatures) {
+        this.signatures = signatures;
     }
     
     

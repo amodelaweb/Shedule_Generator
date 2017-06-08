@@ -13,32 +13,13 @@ import java.util.List;
  *
  * @author SANTI
  */
-public class Signature implements Serializable{
-    
-    private List<Class> classes ; 
-    private String id ; 
+public class System implements Serializable{
     private String name ; 
+    private List<Person> persons ; 
 
-    public Signature( String id, String name) {
-        this.classes = new ArrayList<Class>();
-        this.id = id;
+    public System(String name) {
         this.name = name;
-    }
-
-    public List<Class> getClasses() {
-        return classes;
-    }
-
-    public void setClasses(List<Class> classes) {
-        this.classes = classes;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+        this.persons = new ArrayList<Person>();
     }
 
     public String getName() {
@@ -47,6 +28,14 @@ public class Signature implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Person> getPersons() {
+        return persons;
+    }
+
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
     }
     
     
